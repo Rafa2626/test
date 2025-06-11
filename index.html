@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Todito al X Mayor - Mayorista de Productos para Bebé | San Nicolás, Argentina</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Mayorista de productos para bebé en San Nicolás de los Arroyos. Pañales ecológicos, ropa, medias, accesorios al por mayor. Precios especiales para revendedores en toda Argentina." />
+    <meta name="keywords" content="mayorista bebé, productos bebé al por mayor, pañales ecológicos, medias bebé, San Nicolás Argentina, ropa bebé mayorista, revendedor productos bebé" />
+    <meta name="author" content="Todo Todito al X Mayor" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Todo Todito al X Mayor - Mayorista de Productos para Bebé" />
+    <meta property="og:description" content="Tu mayorista de confianza para productos de bebé. Calidad premium y precios competitivos desde San Nicolás para toda Argentina." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="geo.region" content="AR-B" />
+    <meta name="geo.placename" content="San Nicolás de los Arroyos" />
+    <meta name="geo.position" content="-33.3344;-60.2277" />
+    <meta name="ICBM" content="-33.3344, -60.2277" />
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "Todo Todito al X Mayor",
+      "description": "Mayorista de productos para bebé",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Nicolás de los Arroyos",
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "telephone": "+54-336-412-3456",
+      "email": "info@todotoditoalxmayor.com",
+      "url": "https://todotoditoalxmayor.com",
+      "sameAs": [
+        "https://instagram.com/todotoditoalxmayor"
+      ],
+      "openingHours": [
+        "Mo-Fr 09:00-18:00",
+        "Sa 09:00-13:00"
+      ],
+      "priceRange": "$$",
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer"
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">👶</div>
+                    <div class="logo-text">
+                        <h1>Todo Todito</h1>
+                        <p>al X Mayor</p>
+                    </div>
+                </div>
+                
+                <nav class="nav desktop-nav">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#productos" class="nav-link">Productos</a>
+                    <a href="#promociones" class="nav-link">Promociones</a>
+                    <a href="#testimonios" class="nav-link">Testimonios</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </nav>
+                
+                <button class="cart-btn" id="cartBtn">
+                    🛒 Carrito
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+            
+            <nav class="nav mobile-nav" id="mobileNav">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#productos" class="nav-link">Productos</a>
+                <a href="#promociones" class="nav-link">Promociones</a>
+                <a href="#testimonios" class="nav-link">Testimonios</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">
+                        Tu <span class="gradient-text">Mayorista de Confianza</span>
+                        <br>para Productos de Bebé
+                    </h2>
+                    
+                    <p class="hero-subtitle">
+                        Desde San Nicolás de los Arroyos para toda Argentina. 
+                        Calidad premium, precios mayoristas y la mejor atención para tu negocio.
+                    </p>
+
+                    <div class="hero-features">
+                        <div class="feature-badge">
+                            ⭐ Calidad Premium
+                        </div>
+                        <div class="feature-badge">
+                            🚚 Envío a todo el país
+                        </div>
+                        <div class="feature-badge">
+                            🛡️ Productos Seguros
+                        </div>
+                        <div class="feature-badge">
+                            💖 Hecho con Amor
+                        </div>
+                    </div>
+
+                    <button class="cta-btn" onclick="scrollToSection('productos')">
+                        Ver Catálogo Mayorista
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="productos" class="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nuestros <span class="gradient-text">Productos</span></h2>
+                    <p>Selección premium de productos para bebé con precios mayoristas especiales</p>
+                </div>
+
+                <div class="category-filter">
+                    <button class="filter-btn active" data-category="todos">Todos</button>
+                    <button class="filter-btn" data-category="ropa">Ropa</button>
+                    <button class="filter-btn" data-category="cuidado">Cuidado e Higiene</button>
+                    <button class="filter-btn" data-category="alimentacion">Alimentación</button>
+                    <button class="filter-btn" data-category="accesorios">Accesorios</button>
+                </div>
+
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotions Section -->
+        <section id="promociones" class="promotions">
+            <div class="container">
+                <div class="section-header">
+                    <h2><span class="gradient-text">Promociones</span> Especiales</h2>
+                    <p>Aprovechá nuestras ofertas exclusivas y maximizá tus ganancias</p>
+                </div>
+
+                <div class="promotions-grid">
+                    <div class="promo-card yellow">
+                        <div class="promo-icon">🎁</div>
+                        <h3>Oferta de Lanzamiento</h3>
+                        <p>15% OFF en tu primera compra</p>
+                        <small>Para los primeros 20 clientes nuevos</small>
+                    </div>
+                    
+                    <div class="promo-card blue">
+                        <div class="promo-icon">💯</div>
+                        <h3>Descuentos por Volumen</h3>
+                        <p>10% OFF comprando +$50.000</p>
+                        <small>15% OFF comprando +$100.000</small>
+                    </div>
+                    
+                    <div class="promo-card pink">
+                        <div class="promo-icon">👥</div>
+                        <h3>Plan Revendedor</h3>
+                        <p>Precios especiales para revendedores</p>
+                        <small>Acceso a lista de precios mayoristas</small>
+                    </div>
+                    
+                    <div class="promo-card green">
+                        <div class="promo-icon">📈</div>
+                        <h3>Combos Armados</h3>
+                        <p>Paquetes especiales con descuento</p>
+                        <small>Combinaciones perfectas para tu negocio</small>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h3>¿Querés ser revendedor?</h3>
+                    <p>Obtené acceso a precios especiales y beneficios exclusivos</p>
+                    <a href="https://wa.me/5493364123456?text=Hola! Quiero información sobre el plan revendedor" 
+                       target="_blank" class="whatsapp-btn">
+                        💬 Contactar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonios" class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Lo que dicen nuestros <span class="gradient-text">Clientes</span></h2>
+                    <p>La confianza de nuestros clientes es nuestro mayor orgullo</p>
+                </div>
+
+                <div class="testimonial-slider">
+                    <div class="testimonial-container" id="testimonialContainer">
+                        <!-- Testimonials will be loaded by JavaScript -->
+                    </div>
+                    
+                    <div class="slider-controls">
+                        <button class="slider-btn" id="prevBtn">‹</button>
+                        <button class="slider-btn" id="nextBtn">›</button>
+                    </div>
+                    
+                    <div class="slider-dots" id="sliderDots">
+                        <!-- Dots will be generated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <p>Clientes Satisfechos</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">4.9</div>
+                        <p>Calificación Promedio</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">98%</div>
+                        <p>Recomendación</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2><span class="gradient-text">Contactanos</span></h2>
+                    <p>Estamos aquí para ayudarte. Consultanos sin compromiso</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Información de Contacto</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon green">💬</div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+54 9 336 412-3456</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon blue">📞</div>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+54 336 412-3456</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon purple">✉️</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@todotoditoalxmayor.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon red">📍</div>
+                            <div>
+                                <h4>Ubicación</h4>
+                                <p>San Nicolás de los Arroyos, Buenos Aires</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon yellow">🕒</div>
+                            <div>
+                                <h4>Horarios</h4>
+                                <p>Lun - Vie: 9:00 - 18:00<br>Sáb: 9:00 - 13:00</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon pink">📱</div>
+                            <div>
+                                <h4>Instagram</h4>
+                                <p>@todotoditoalxmayor</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-cta">
+                        <div class="cta-card">
+                            <h3>¡Empezá tu negocio hoy!</h3>
+                            <p>Consultanos por WhatsApp y obtené tu lista de precios mayoristas al instante</p>
+                            
+                            <a href="https://wa.me/5493364123456?text=Hola! Quiero información sobre productos mayoristas" 
+                               target="_blank" class="whatsapp-btn">
+                                💬 Contactar por WhatsApp
+                            </a>
+
+                            <div class="cta-stats">
+                                <div class="cta-stat">
+                                    <div class="cta-stat-number">24hs</div>
+                                    <div class="cta-stat-text">Respuesta rápida</div>
+                                </div>
+                                <div class="cta-stat">
+                                    <div class="cta-stat-number">100%</div>
+                                    <div class="cta-stat-text">Online</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-card">
+                            <h3>Seguinos en redes</h3>
+                            <p>Mantente al día con nuestras novedades, promociones y consejos para tu bebé</p>
+                            
+                            <div class="social-links">
+                                <a href="https://instagram.com/todotoditoalxmayor" target="_blank" class="social-link">
+                                    📱 Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">👶</div>
+                        <div class="logo-text">
+                            <h3>Todo Todito</h3>
+                            <p>al X Mayor</p>
+                        </div>
+                    </div>
+                    <p>Tu mayorista de confianza para productos de bebé. Desde San Nicolás de los Arroyos 
+                       para toda Argentina, ofrecemos calidad premium y precios competitivos.</p>
+                    <div class="footer-love">
+                        💖 Hecho con amor para tu bebé
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/todotoditoalxmayor" target="_blank" class="footer-social-link">
+                            📱 Instagram
+                        </a>
+                        <a href="https://wa.me/5493364123456" target="_blank" class="footer-social-link">
+                            💬 WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <div class="footer-contact-item">
+                        <span class="footer-icon">📍</span>
+                        <span>San Nicolás de los Arroyos, Buenos Aires</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-icon">📞</span>
+                        <span>+54 336 412-3456</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-icon">✉️</span>
+                        <span>info@todotoditoalxmayor.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-icon">🕒</span>
+                        <span>Lun-Vie: 9:00-18:00<br>Sáb: 9:00-13:00</span>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <a href="#inicio" class="footer-link">Inicio</a>
+                    <a href="#productos" class="footer-link">Productos</a>
+                    <a href="#promociones" class="footer-link">Promociones</a>
+                    <a href="#testimonios" class="footer-link">Testimonios</a>
+                    <a href="#contacto" class="footer-link">Contacto</a>
+                </div>
+
+                <div class="footer-info">
+                    <h4>Información</h4>
+                    <div class="footer-highlight">
+                        <div class="footer-highlight-icon">🏆</div>
+                        <div>
+                            <strong>Calidad Garantizada</strong>
+                            <p>Productos certificados y seguros</p>
+                        </div>
+                    </div>
+                    <div class="footer-highlight">
+                        <div class="footer-highlight-icon">🚚</div>
+                        <div>
+                            <strong>Envío Nacional</strong>
+                            <p>A toda Argentina</p>
+                        </div>
+                    </div>
+                    <div class="footer-highlight">
+                        <div class="footer-highlight-icon">💰</div>
+                        <div>
+                            <strong>Precios Mayoristas</strong>
+                            <p>Los mejores del mercado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>© 2024 Todo Todito al X Mayor. Todos los derechos reservados.</p>
+                    <p class="footer-tagline">Productos de bebé al por mayor | San Nicolás de los Arroyos, Argentina</p>
+                </div>
+                <div class="footer-badge">
+                    <span class="footer-badge-text">Mayorista Confiable</span>
+                    <span class="footer-badge-stars">⭐⭐⭐⭐⭐</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>🛒 Mi Carrito</h3>
+                <button class="close-btn" id="closeCartBtn">✕</button>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded by JavaScript -->
+            </div>
+            
+            <div class="cart-footer" id="cartFooter">
+                <!-- Cart footer will be loaded by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="product-modal-overlay" id="productModalOverlay"></div>
+        <div class="product-modal-content">
+            <div class="product-modal-header">
+                <h3 id="productModalTitle">Detalle del Producto</h3>
+                <button class="close-btn" id="closeProductModalBtn">✕</button>
+            </div>
+            
+            <div class="product-modal-body">
+                <div class="product-modal-gallery" id="productModalGallery">
+                    <!-- Gallery will be loaded by JavaScript -->
+                </div>
+                
+                <div class="product-modal-info">
+                    <h2 id="productModalName"></h2>
+                    <div class="product-modal-category" id="productModalCategory"></div>
+                    <div class="product-modal-price" id="productModalPrice"></div>
+                    <div class="product-modal-description" id="productModalDescription"></div>
+                    
+                    <div class="product-modal-features">
+                        <h4>Características:</h4>
+                        <ul id="productModalFeatures">
+                            <!-- Features will be loaded by JavaScript -->
+                        </ul>
+                    </div>
+                    
+                    <div class="product-modal-actions">
+                        <button class="add-to-cart-btn" id="productModalAddToCart">
+                            🛒 Añadir al Carrito
+                        </button>
+                        <button class="whatsapp-btn" id="productModalWhatsApp">
+                            💬 Consultar por WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
